@@ -2,9 +2,7 @@
 <html>
 
 <head>
-
-    ...
-
+    <title>Excel to DAT Converter</title>
 
     <style>
         body {
@@ -69,24 +67,42 @@
         }
     </style>
 
+</head>
 
+<body>
 
     <div class="container">
 
-        <h1>Vat Relief</h1>
-        <h2>Excel to Dat file Converter</h2>
+        <h1>Vat Relief Sales</h1>
 
-        <br>
+        <div class="menu">
 
-        <a class="nav-btn" href="/purchases.html">
-            Purchases Converter
+            <a class="nav-btn" href="/">
+                Home
+            </a>
+
+
+
+        </div>
+
+        <h2>Sales Excel to DAT Converter</h2>
+        <a href="/templates/Sales Template - Vat Relief.xlsx" download>
+            Download Excel Template
         </a>
 
         <br><br>
 
-        <a class="nav-btn" href="/sales.html">
-            Sales Converter
-        </a>
+        <form action="/upload-sales" method="POST" enctype="multipart/form-data">
+
+            <input type="file" name="excelFile" accept=".xlsx,.xls" required>
+
+            <br><br>
+
+            <button id="convertBtn" type="submit">
+                Convert to DAT
+            </button>
+
+        </form>
 
         <br><br>
 
@@ -96,6 +112,22 @@
 
     </div>
 
-    </body>
+
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+
+        const fileName = params.get("file");
+
+        document.getElementById("fileName").innerText =
+            "File: " + fileName;
+
+        document.getElementById("downloadBtn").href =
+            "/download/" + fileName;
+
+    </script>
+
+
+</body>
 
 </html>

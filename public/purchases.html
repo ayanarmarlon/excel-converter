@@ -5,7 +5,6 @@
 
     ...
 
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -69,32 +68,57 @@
         }
     </style>
 
+</head>
+
+<body>
+
+    <body>
+
+        <div class="container">
+
+            <h1>Vat Relief Purchases</h1>
+
+            <div class="menu">
+
+                <a class="nav-btn" href="/">
+                    Home
+                </a>
 
 
-    <div class="container">
 
-        <h1>Vat Relief</h1>
-        <h2>Excel to Dat file Converter</h2>
+            </div>
 
-        <br>
 
-        <a class="nav-btn" href="/purchases.html">
-            Purchases Converter
-        </a>
+            <h2>Excel to DAT Converter</h2>
+            <a href="/templates/Purchases Template - Vat Relief.xlsx" download>
+                Download Excel Template
+            </a>
 
-        <br><br>
+            <br><br>
 
-        <a class="nav-btn" href="/sales.html">
-            Sales Converter
-        </a>
+            <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data">
 
-        <br><br>
+                <input type="file" name="excelFile" accept=".xlsx,.xls" required>
 
-        <p class="footer">
-            © 2026 Developed by: ayanarmarlon
-        </p>
+                <br><br>
 
-    </div>
+                <button id="convertBtn" type="submit">
+                    Convert to DAT
+                </button>
+
+            </form>
+
+            <br><br>
+
+            <p class="footer">
+                © 2026 Developed by: ayanarmarlon
+            </p>
+
+        </div>
+
+
+        </script>
+
 
     </body>
 

@@ -1,83 +1,83 @@
-            <!DOCTYPE html>
-            <html>
-            <head>
-                <title>Conversion Successful</title>
+<!DOCTYPE html>
+<html>
 
-                <style>
+<head>
+    <title>Conversion Successful</title>
 
-                    body{
-                        font-family: Arial;
-                        text-align:center;
-                        margin-top:100px;
-                        background:#f4f6f9;
-                    }
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+            background: #f4f6f9;
+        }
 
-                    .box{
-                        background:white;
-                        width:500px;
-                        margin:auto;
-                        padding:30px;
-                        border-radius:10px;
-                        box-shadow:0 0 10px rgba(0,0,0,.1);
-                    }
+        .box {
+            background: white;
+            width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        }
 
-                    h1{
-                        color:green;
-                    }
+        h1 {
+            color: green;
+        }
 
-                    a{
-                        display:inline-block;
-                        margin-top:20px;
-                        padding:10px 20px;
-                        background:#0078d7;
-                        color:white;
-                        text-decoration:none;
-                        border-radius:5px;
-                    }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #0078d7;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
 
-                </style>
-            </head>
+<body>
 
-            <body>
-
-            <div class="box">
+    <div class="box">
 
 
-            <div class="box">
+        <div class="box">
 
-    <h1>✓ Conversion Successful</h1>
+            <h1>✓ Conversion Successful</h1>
 
-    <p>DAT File Created Successfully</p>
+            <p>DAT File Created Successfully</p>
 
-    <p id="fileName"></p>
+            <p id="fileName"></p>
 
-    <a id="downloadBtn" href="#">
-        Download DAT File
-    </a>
+            <a id="downloadBtn" href="#">
+                Download DAT File
+            </a>
 
-    <br><br>
+            <br><br>
 
-    <a href="/">
-        Convert Another File
-    </a>
+            <a href="/">
+                Convert Another File
+            </a>
 
         </div>
 
-            </div>
+    </div>
 
-            <script>
+    <script>
 
-const params = new URLSearchParams(window.location.search);
+        const params = new URLSearchParams(window.location.search);
 
-const fileName = params.get("file");
+        const fileName = params.get("file");
 
-document.getElementById("fileName").innerText =
-    "File: " + fileName;
+        document.getElementById("fileName").innerText =
+            "File: " + fileName;
 
-document.getElementById("downloadBtn").href =
-    "/download/" + fileName;
+        document.getElementById("downloadBtn").href =
+            "/download/" + fileName;
 
-</script>
+    </script>
 
-            </body>
-            </html>
+</body>
+
+</html>
