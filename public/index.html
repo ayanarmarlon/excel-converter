@@ -1,0 +1,98 @@
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Excel to DAT Converter</title>
+
+                <style>
+
+                    body{
+                        font-family: Arial, sans-serif;
+                        background:#f4f6f9;
+                        display:flex;
+                        justify-content:center;
+                        align-items:center;
+                        height:100vh;
+                    }
+
+                    .container{
+                        background:white;
+                        padding:30px;
+                        border-radius:10px;
+                        box-shadow:0 0 15px rgba(0,0,0,.1);
+                        width:450px;
+                        text-align:center;
+                    }
+
+                    h1{
+                        color:#333;
+                    }
+
+                    button{
+                        background:#0078d7;
+                        color:white;
+                        border:none;
+                        padding:12px 20px;
+                        cursor:pointer;
+                        border-radius:5px;
+                        margin-top:15px;
+                    }
+
+                    button:hover{
+                        background:#005fa3;
+                    }
+
+                </style>
+
+            </head>
+
+            <body>
+
+            <div class="container">
+
+                <h1>Vat Relief Purchases</h1>
+                <h2>Excel to DAT Converter</h2>
+                <a href="/templates/Purchases Template - Vat Relief.xlsx" download>
+        Download Excel Template
+    </a>
+
+    <br><br>
+
+            <form id="uploadForm"
+                action="/upload"
+                method="POST"
+                enctype="multipart/form-data">
+
+                <input type="file"
+                name="excelFile"
+                accept=".xlsx,.xls"
+                required>
+
+                    <br><br>
+
+                <button id="convertBtn" type="submit">
+                    Convert to DAT
+                </button>
+
+            </form>
+
+
+            </div>
+
+
+        <script>
+
+        const params = new URLSearchParams(window.location.search);
+
+        const fileName = params.get("file");
+
+        document.getElementById("fileName").innerText =
+            "File: " + fileName;
+
+        document.getElementById("downloadBtn").href =
+            "/download/" + fileName;
+
+        </script>
+
+
+            </body>
+            </html>
